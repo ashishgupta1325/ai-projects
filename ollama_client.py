@@ -28,11 +28,11 @@ class OllamaClient:
 
     def chat(self, model: str):
         """Interactive chat with the model."""
-        print(f"Starting chat with {model} (type 'exit' to quit)")
+        print(f"Starting chat with {model} (type '/bye' to quit)")
         while True:
             try:
                 user_input = input("\nYou: ").strip()
-                if user_input.lower() == 'exit':
+                if user_input.lower() == '/bye':
                     break
                 
                 response = self.generate_response(model, user_input)
